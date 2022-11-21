@@ -14,17 +14,24 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const firstLetter = hexaInput.charAt(0);
-    if (
-      firstLetter === "#" &&
-      (hexaInput.length === 4 || hexaInput.length === 7)
-    ) {
+
+    if (hexToRGBA(hexaInput)) {
+      setRGBAColor(hexToRGBA(hexaInput));
       setErrorClass("null");
-      hexToRGBA(hexaInput);
-      // more code for correct input
     } else {
       setErrorClass("error");
     }
+    // const firstLetter = hexaInput.charAt(0);
+    // if (
+    //   firstLetter === "#" &&
+    //   (hexaInput.length === 4 || hexaInput.length === 7)
+    // ) {
+    //   setErrorClass("null");
+    //   hexToRGBA(hexaInput);
+    //   // more code for correct input
+    // } else {
+    //   setErrorClass("error");
+    // }
   };
 
   return (
