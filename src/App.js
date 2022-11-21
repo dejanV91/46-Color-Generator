@@ -1,37 +1,10 @@
 import React, { useState } from "react";
-import hexToRGBA from "./shared/hexaToRGBA";
 
 function App() {
-  const [hexaInput, setHexaInput] = useState("#156538");
-  const [errorClass, setErrorClass] = useState("null");
-  const [rgbColor, setRGBAColor] = useState("rgb(21, 101, 56)");
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    const value = e.target.value;
-    setHexaInput(value);
-  };
+  const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (hexToRGBA(hexaInput)) {
-      setRGBAColor(hexToRGBA(hexaInput));
-      setErrorClass("null");
-    } else {
-      setErrorClass("error");
-    }
-    // const firstLetter = hexaInput.charAt(0);
-    // if (
-    //   firstLetter === "#" &&
-    //   (hexaInput.length === 4 || hexaInput.length === 7)
-    // ) {
-    //   setErrorClass("null");
-    //   hexToRGBA(hexaInput);
-    //   // more code for correct input
-    // } else {
-    //   setErrorClass("error");
-    // }
   };
 
   return (
@@ -41,19 +14,19 @@ function App() {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            className={errorClass}
+            className={"null"}
             placeholder="#f15025"
-            value={hexaInput}
-            onChange={handleChange}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
           />
           <button className="btn">submit</button>
         </form>
       </section>
       <section className="colors">
-        <article className="color" style={{ background: `${rgbColor}` }}>
+        {/* <article className="color" style={{ background: `${rgbColor}` }}>
           <p className="percent-value">20%</p>
           <p className="color-value">#526879</p>
-        </article>
+        </article> */}
       </section>
     </>
   );
