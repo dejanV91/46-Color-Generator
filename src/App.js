@@ -4,13 +4,13 @@ import { SingleColor } from "./components/SingleColor";
 
 function App() {
   const [input, setInput] = useState("");
-  const [list, setList] = useState(new Values("#f15025").all(10));
+  const [list, setList] = useState(new Values("#31d4a9").all(5));
   const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      let color = new Values(input.toString()).all(10);
+      let color = new Values(input.toString()).all(5);
       setList(color);
       setError(false);
     } catch (error) {
@@ -38,10 +38,6 @@ function App() {
         {list.map((color, index) => {
           return <SingleColor key={index} index={index} {...color} />;
         })}
-        {/* <article className="color" style={{ background: `${rgbColor}` }}>
-          <p className="percent-value">20%</p>
-          <p className="color-value">#526879</p>
-        </article> */}
       </section>
     </>
   );
