@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dejanV91.github.io/46-Color-Generator/static/css/main.9885309a.css",
+    "main.js": "/dejanV91.github.io/46-Color-Generator/static/js/main.43aac589.js",
+    "index.html": "/dejanV91.github.io/46-Color-Generator/index.html",
+    "main.9885309a.css.map": "/dejanV91.github.io/46-Color-Generator/static/css/main.9885309a.css.map",
+    "main.43aac589.js.map": "/dejanV91.github.io/46-Color-Generator/static/js/main.43aac589.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9885309a.css",
+    "static/js/main.43aac589.js"
+  ]
+}
